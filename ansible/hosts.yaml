@@ -1,5 +1,6 @@
 all:
   hosts:
     jetson:
+      ansible_connection: local
       ansible_host: "{{ lookup('env', 'JETSON_ROOTFS_DIR') }}"
       ansible_executable: /bin/bash

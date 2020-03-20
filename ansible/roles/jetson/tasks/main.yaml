@@ -8,10 +8,10 @@
     mode: 0644
 
 - name: Upgrade packages
+  become: true
   apt:
-    upgrade: dist
     update_cache: yes
-
+    cache_valid_time: 86400
 - name: Install packages
   apt:
     name: "{{ item }}"
